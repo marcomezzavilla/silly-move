@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #ddd;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: center;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  position: absolute;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.square {
+  width: 50vw;
+  height: calc(100vh - 40px);
+  position: absolute;
+  background-color: rebeccapurple;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: pink;
+  position: absolute;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .2);
+  z-index: 10;
+}
+
+.is-smooth {
+  transition: transform .1s ease-out;
+}
