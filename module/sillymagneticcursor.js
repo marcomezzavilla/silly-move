@@ -7,7 +7,7 @@ let cursorPercentageY;
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
 
-let options = {
+let defaultOptions = {
   debug: true,
   easings: 'linear',
   enableOnMobile: false,
@@ -19,7 +19,7 @@ let options = {
 };
 
 class SillyMagnetic {
-  constructor(target, options = {options}) {
+  constructor(target, options) {
     let direction;
     let easing;
     let moveX;
@@ -30,6 +30,11 @@ class SillyMagnetic {
     let queryTarget;
     let unit;
     let unitModifier;
+
+    options = {
+      ...defaultOptions,
+      ...options,
+    };
 
     window.addEventListener('resize', reportViewportSize);
     window.addEventListener('mousemove', reportMousePosition);
