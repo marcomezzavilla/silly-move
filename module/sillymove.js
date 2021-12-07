@@ -18,7 +18,7 @@ let defaultOptions = {
   unit: 'px'
 };
 
-class SillyMagnetic {
+class SillyMove {
   constructor(target, options) {
     let direction;
     let easing;
@@ -154,4 +154,4 @@ class SillyMagnetic {
   }
 }
 
-export { SillyMagnetic };
+export { SillyMove };

@@ -1,24 +1,10 @@
-import { SillyMagnetic } from "./module/sillymagneticcursor.js";
+import { SillyMove } from "./module/sillymove.js";
 
 window.addEventListener('DOMContentLoaded', (event) => {
   let elements = document.querySelectorAll('.please');
 
-
-  window.addEventListener('mousemove', (event) => {
-    // [...elements].forEach((element) => {
-    //   new SillyMagnetic(element, {
-    //     debug: false,
-    //     easing: 'linear',
-    //     enableOnMobile: false,
-    //     movement: 'xy',
-    //     originX: 50,
-    //     originY: 50,
-    //     unit: "px",
-    //     unitMultiplier: 2
-    //   });
-    // });
-  
-    let el2 = new SillyMagnetic('.square', {
+  window.addEventListener('mousemove', (event) => {  
+    let el1 = new SillyMove('.square', {
       debug: false,
       invertDirection: true,
       movement: 'xy',
@@ -28,7 +14,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       unitDivider: 2
     });
   
-    let el3 = new SillyMagnetic('.circle', {
+    let el2 = new SillyMove('.circle', {
       debug: false,
       easing: 'ease',
       enableOnMobile: true,
@@ -40,9 +26,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
   });
   
-
 });
-
-
-
-
